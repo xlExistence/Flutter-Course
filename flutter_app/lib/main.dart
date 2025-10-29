@@ -4,6 +4,13 @@ void main() {
   runApp(const MyApp());
 }
 
+String name = 'text';
+int number = 0;
+double doubleNumber = 0.0;
+List mylist = ['a', 'b', 'c'];
+Map<String, dynamic> mymap = {'a': 1, 'b': '2', 'c': [3]};
+// Map defines a key value pair, dynamic means it can be any type
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
