@@ -8,7 +8,11 @@ String name = 'text';
 int number = 0;
 double doubleNumber = 0.0;
 List mylist = ['a', 'b', 'c'];
-Map<String, dynamic> mymap = {'a': 1, 'b': '2', 'c': [3]};
+Map<String, dynamic> mymap = {
+  'a': 1,
+  'b': '2',
+  'c': [3],
+};
 // Map defines a key value pair, dynamic means it can be any type
 
 class MyApp extends StatelessWidget {
@@ -18,6 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -35,7 +40,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+          brightness: Brightness.dark,
+        ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -93,10 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text(
-          "Hello",
-          style: TextStyle(color: Colors.amber),
-        ),
+        child: Text("Hello", style: TextStyle(color: Colors.amber)),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
